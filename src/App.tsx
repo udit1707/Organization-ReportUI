@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/Header';
+import Sidebar from './components/Sidebar/Sidebar';
+import OrganizationPicker from './pages/OrganizationPicker/OrganizationPicker';
+import TestReportList from './pages/TestReportList/TestReportList';
 
 export const App: React.FunctionComponent = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="logo" />
-        <p>
-          UI Engineer Position Take Home Challenge
-        </p>
-        <a
-          className="App-link"
-          href="https://doc.clickup.com/d/h/a0kg5-1183/8d71939ada06572"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Open the Exercise
-        </a>
-      </header>
+      <Header/>
+      <div className="page-cnt">
+        <Sidebar/>
+        {/* <OrganizationPicker/> */}
+        {/* <TestReportList/> */}
+      </div>
+     
     </div>
   );
 }

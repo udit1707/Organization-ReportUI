@@ -1,0 +1,50 @@
+.test-report-card {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f2f5f7;
+  border-radius: 4px;
+  cursor: pointer;
+
+  .left-cnt {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .test-report-name {
+      color: #8694a1;
+      font-size: 18px;
+      line-height: 18px;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+
+    .duration-time-cnt {
+      display: flex;
+      align-items: center;
+      color: #c5d1da;
+      font-size: 13px;
+      .start {
+        margin: 0 5px;
+      }
+
+      .duration {
+        margin: 0 5px;
+      }
+    }
+  }
+
+  .passed {
+    color: #5e9d93;
+    font-size: 17px;
+    line-height: 18px;
+    margin: 0 20px;
+  }
+
+  .failed {
+    color: #d55368;
+    font-size: 17px;
+    line-height: 18px;
+  }
+}

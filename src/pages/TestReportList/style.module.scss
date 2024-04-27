@@ -1,0 +1,21 @@
+.test-report-list {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  .header-text {
+    color: #6558f5;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .list-cnt {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+  }
+}

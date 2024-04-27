@@ -1,0 +1,26 @@
+.header {
+  position: absolute;
+  top: 0;
+  height: 50px;
+  left: 0;
+  right: 0;
+  background-color: #9eadba;
+  text-align: left;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+
+  .left-cnt {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .dot-icon {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: #8f9eac;
+      margin: 0 10px;
+    }
+  }
+}
