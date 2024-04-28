@@ -1,0 +1,107 @@
+.test-report-details-page {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+
+  .top-nav-strip {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+
+    .test-report {
+      color: purple;
+      font-weight: 500;
+      margin-right: 20px;
+    }
+
+    .test-name {
+      margin-left: 10px;
+      color: #293845;
+      font-weight: 500;
+    }
+
+  }
+
+  .details-card {
+    border-radius: 5px;
+    background-color: #f2f5f7;
+    padding: 6px;
+    margin: 20px 0;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+
+    .row {
+      display: flex;
+      align-items: center;
+      margin: 5px 0;
+
+      .info-cnt {
+        display: flex;
+        align-items: center;
+        margin: 0 5px;
+
+        .icon {
+          margin: 0 5px;
+        }
+
+        .info-text {
+          white-space: nowrap;
+
+          &--build {
+            color: purple;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  .result-tab {
+    border-bottom: 2px solid grey;
+    text-align: left;
+    margin-top: 20px;
+
+    .result-text {
+      border-bottom: 4px solid purple;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 24px;
+      color: purple;
+    }
+  }
+
+  .search-cnt {
+    margin: 25px 0;
+    width: 100%;
+    border: 2px solid grey;
+    border-radius: 4px;
+    text-align: left;
+
+    .inp-field {
+      outline: none;
+      border: none;
+      padding: 10px;
+      width: 100%;
+
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px;
+      color: grey;
+
+      &::placeholder {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        color: grey;
+      }
+
+      &:focus {
+        outline: none !important;
+        border: none !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.org-card-cnt {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 20px;
+    border: 2px solid #788896;
+    border-radius: 5px;
+    background-color: #ced8e0;
+    justify-content: center;
+    cursor: pointer;
+    padding: 20px;
+    width: 50%;
+
+    .org-icon {
+        width: 25px;
+        height: 25px;
+        background-color: white;
+        color: #788896;
+        position: absolute;
+        left: 10px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .org-name {
+        font-weight: 650;
+        color: white;
+        font-size: 18px;
+        line-height: 24px;
+    }
+}

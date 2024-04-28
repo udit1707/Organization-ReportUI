@@ -1,0 +1,39 @@
+.accordion-cnt {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 20px 0;
+
+  .accordion-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 10px;
+
+    .icon {
+      margin-right: 10px;
+    }
+
+    .status-icon {
+      margin: 0 20px;
+      color: red;
+
+      &--passed{
+        color: green;
+      }
+    }
+
+    .status {
+      color: #a5b0ba;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+  }
+
+  .accordion-body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+}

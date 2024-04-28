@@ -1,0 +1,18 @@
+.info-cnt {
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+
+  .icon {
+    margin: 0 5px;
+  }
+
+  .info-text {
+    white-space: nowrap;
+
+    &--build {
+      color: purple;
+      font-weight: 500;
+    }
+  }
+}

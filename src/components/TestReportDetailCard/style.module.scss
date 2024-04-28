@@ -1,0 +1,27 @@
+.report-detail-card {
+  display: flex;
+  align-items: center;
+  background-color: #f2f5f7;
+  padding: 10px 25px;
+  border-left: 2px solid red;
+  border-radius: 5px;
+  margin: 12px 0;
+
+  &--success{
+    border-left: 2px solid green;
+
+  }
+
+  .url {
+    color: #7b8b99;
+    font-size: 18px;
+    flex: 1;
+    text-align: left;
+  }
+
+  .duration {
+    color: #c9d3dc;
+    font-size: 18px;
+    margin: 0 10px;
+  }
+}
