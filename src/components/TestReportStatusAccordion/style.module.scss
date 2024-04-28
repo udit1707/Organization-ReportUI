@@ -17,6 +17,10 @@
     .status-icon {
       margin: 0 20px;
       color: red;
+
+      &--passed{
+        color: green;
+      }
     }
 
     .status {
