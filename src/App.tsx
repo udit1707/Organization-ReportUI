@@ -45,6 +45,16 @@ export const App: React.FunctionComponent = () => {
               </>
             }
           />
+           <Route
+            path="*"
+            element={
+              <>
+                {" "}
+                <Sidebar />
+                <ErrorHandler />
+              </>
+            }
+          />
         </Routes>
       </div>
     </div>
