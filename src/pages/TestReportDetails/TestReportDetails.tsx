@@ -5,7 +5,7 @@ import { FiBox } from "react-icons/fi";
 import { IoIosGitBranch } from "react-icons/io";
 import { TbGitCommit } from "react-icons/tb";
 import { GoGlobe } from "react-icons/go";
-import { useContext, useEffect, useMemo } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import { OrganizationContext } from "../../OrganizationContext";
 import { useParams } from "react-router-dom";
 
@@ -20,6 +20,11 @@ const TestReportDetails = () => {
     orgs,
     currentReport,
   } = useContext(OrganizationContext);
+  const [query, setQuery] = useState("");
+
+  const handleFilter = (e: any) => {
+    setQuery(e.target.value);
+  };
 
   const testReportName = useMemo(() => {
     const foundReport =
@@ -73,10 +78,20 @@ const TestReportDetails = () => {
       if (!reportDetails) return [[], 0, [], 0, 0];
       const passed =
         reportDetails &&
-        reportDetails.endpoints.filter((i: any) => i.status === "SUCCESS");
+        reportDetails.endpoints.filter((i: any) =>
+          query.length > 0
+            ? i.status === "SUCCESS" &&
+              i.url.toLowerCase().includes(query.toLowerCase())
+            : i.status === "SUCCESS"
+        );
       const failed =
         reportDetails &&
-        reportDetails.endpoints.filter((i: any) => i.status !== "SUCCESS");
+        reportDetails.endpoints.filter((i: any) =>
+          query.length > 0
+            ? i.status !== "SUCCESS" &&
+              i.url.toLowerCase().includes(query.toLowerCase())
+            : i.status !== "SUCCESS"
+        );
 
       return [
         failed,
@@ -85,7 +100,7 @@ const TestReportDetails = () => {
         passed.length,
         reportDetails.endpoints.length,
       ];
-    }, [reportDetails && reportDetails.endpoints, orgId, reportId]);
+    }, [reportDetails && reportDetails.endpoints, orgId, reportId, query]);
 
   return (
     <div className={style["test-report-details-page"]}>
@@ -160,6 +175,8 @@ const TestReportDetails = () => {
           type="text"
           placeholder="Filter by endpoint..."
           className={style["inp-field"]}
+          value={query}
+          onChange={handleFilter}
         />
       </div>
 
